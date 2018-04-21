@@ -13,6 +13,9 @@ Route::get('/', function () {
 });
 
 */
+
+Auth::routes();
 Route::get('/','PagesController@index');
-
-
+Route::resource('organisations','OrganisationsController');
+Route::resource('groups','GroupsController');
+Route::get('/dashboard', 'DashboardController@index');

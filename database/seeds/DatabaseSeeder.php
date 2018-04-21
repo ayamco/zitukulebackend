@@ -11,6 +11,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        DB::table('roles')->insert([
+            'name' =>'admin',
+        ]);
+
+        DB::table('roles')->insert([
+            'name' =>'secretarietadmin',
+        ]);
+        
+        DB::table('roles')->insert([
+            'name' =>'organisationadmin',
+        ]);
+
+        DB::table('roles')->insert([
+            'name' =>'groupadmin',
+        ]);
     }
 }
